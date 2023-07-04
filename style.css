@@ -16,8 +16,44 @@
     opacity: 1;
 }
 
+.slide {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.slide.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.leftSlide {
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.leftSlide.active {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.rightSlide {
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.rightSlide.active {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
 .typed-cursor {
-    color: #C4B0FF;
+    color: #000000;
     font-size: 4rem;
     font-weight: 100;
 }
@@ -25,6 +61,18 @@
 body {
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.arrow {
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    width: 62px;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    bottom: 10px;
 }
 
 .navbar {
@@ -74,12 +122,15 @@ body {
     --ui-fluid-2: #6EFFEA;
     --ui-fluid-3: #E93CFF;
     --ui-fluid-4: #8D77FF;
+    scroll-behavior: smooth;
+
 }
 
 .bgImage {
     position: absolute;
     width: 100vw;
     height: 165vh;
+    overflow-x: hidden;
 }
 
 .contentTopArea {
@@ -208,7 +259,6 @@ body {
 }
 
 .rightBox img {
-    filter: brightness(100%) contrast(100%) saturate(134%) blur(0px) hue-rotate(239deg);
     border-radius: 10px 10px 10px 10px;
     width: 40vw;
 }
@@ -278,8 +328,6 @@ body {
     justify-content: space-between;
 }
 
-.headerOfNeed .leftNeed {}
-
 .headerOfNeed .leftNeed h2 {
     font-size: 30px;
 }
@@ -296,4 +344,489 @@ body {
     padding: 19px 35px;
     color: white;
     cursor: pointer;
+}
+
+.needCard {
+    width: 80vw;
+    margin: 100px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 60px;
+}
+
+.card {
+    width: 30vw;
+    height: 35vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 30px 30px 30px 30px;
+    box-shadow: 9px 9px 0px 0px #000000;
+    margin: 0px 20px 0px 10px;
+    gap: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    gap: 100px;
+}
+
+.statsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85vw;
+    background-image: linear-gradient(140deg, #7e7ce9 0%, #c78fcd 30%, #ff98b7 50%, #ff98b7 70%, #84abfc 100%);
+    background-color: transparent;
+    padding: 50px;
+    border-radius: 10px;
+    gap: 30px;
+    align-items: center;
+}
+
+.statsImage {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.statsContent {
+    text-align: center;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+
+.statsContent h1 {
+    font-size: 48px;
+}
+
+.statsContent p {
+    font-size: 16px;
+}
+
+.statsImage img {
+    border-radius: 10px;
+}
+
+.statsImage .statsImage1 {
+    height: 30vh;
+}
+
+.statsImage .statsImage2 {
+    height: 30vh;
+}
+
+.statsCard2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85vw;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #52FF48 100%);
+    padding: 50px;
+    border-radius: 10px;
+    gap: 30px;
+    align-items: center;
+}
+
+.statsCard3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85vw;
+
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #7346FF 100%);
+
+    padding: 50px;
+    border-radius: 10px;
+    gap: 30px;
+    align-items: center;
+}
+
+.statsImage2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.statsImage2 img {
+    border-radius: 10px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+
+.project .qualityBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85vw;
+    background-image: linear-gradient(140deg, #2d0d7a 10%, #5f45af 30%, #9093d8 50%, #cadbfc 70%, #5f45af 100%);
+    background-color: transparent;
+    padding: 50px 50px 0px 50px;
+    border-radius: 20px;
+}
+
+.project .rightBox img {
+    border-radius: 0px;
+    width: 40vw;
+}
+
+.project .leftBox {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+}
+
+.project .contentOfQuality {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project.contentOfQuality h2 {
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.project .contentOfQuality p {
+    font-size: 15px;
+    color: #ffffffb3;
+}
+
+.project .qualityBox2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85vw;
+    background-image: linear-gradient(140deg, #5e4a8c 10%, #457faf 30%, #90c5d8 50%, #cadbfc 70%, #45a8af 100%);
+    background-color: transparent;
+    padding: 50px 50px 50px 50px;
+    border-radius: 20px;
+}
+
+.contactUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0px 100px 0px;
+}
+
+.contactPage {
+    background-color: transparent;
+    background-image: url("https://danishkhan.in/wp-content/uploads/2023/05/chatbot-hero-bg-1.webp");
+    width: 80vw;
+    padding: 100px;
+    border-radius: 20px;
+}
+
+form {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.name input {
+    padding: 19px 100px 19px 10px;
+}
+
+.checkbox {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox1::before {
+    content: "Ecommerce Website";
+}
+
+.checkbox2::before {
+    content: "Business Website";
+}
+
+.checkbox3::before {
+    content: "Portfolio Website";
+}
+
+label {
+    font-weight: 700;
+}
+
+form button {
+    fill: #000000;
+    color: #000000;
+    background-image: linear-gradient(140deg, #FC466B 0%, #3F5EFB 100%);
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 9px 9px 0px 0px #000000;
+    padding: 19px 35px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 400ms;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .headerOfNeed .leftNeed h1 {
+        font-size: 55px;
+    }
+
+    .needCard {
+        width: 90vw;
+    }
+
+    .card {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .headerOfNeed .leftNeed h2 {
+        font-size: 25px;
+    }
+
+    .headerOfNeed {
+        flex-direction: column;
+    }
+
+    .headerOfNeed .leftNeed h1 {
+        font-size: 60px;
+    }
+
+    .statsImage .statsImage2 {
+        height: 20vh;
+    }
+
+    .card {
+        height: 30vh;
+    }
+
+    .bgImage {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .headerOfNeed .leftNeed h2 {
+        font-size: 25px;
+    }
+
+    .contentOfQuality h2 {
+        font-size: 20px;
+    }
+
+    .contactPage {
+        width: 90vw;
+        padding: 40px;
+    }
+
+    .headerOfNeed {
+        flex-direction: column;
+    }
+
+    .statsImage {
+        flex-direction: column;
+    }
+
+    .statsImage .statsImage2 {
+        object-fit: contain;
+    }
+
+    .statsImage .statsImage1 {
+        width: 100%;
+    }
+
+    .card {
+        height: 35vh;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .headerOfNeed .leftNeed h1 {
+        font-size: 50px;
+    }
+
+    .statsImage {
+        flex-direction: column;
+    }
+
+    .statsImage .statsImage2 {
+        object-fit: contain;
+    }
+
+    .buildingMemorable {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buildingMemorable h1 {
+        text-align: center;
+    }
+
+    .rightBox img {
+        width: 35vw;
+    }
+
+    .card {
+        height: 55vh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .needCard {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 60vw;
+        height: auto;
+    }
+
+    .bigFontQuality h1 {
+        font-size: 80px;
+    }
+
+    .smallFontQuality h1 {
+        font-size: 40px;
+    }
+
+    .headerOfNeed .leftNeed h1 {
+        font-size: 35px;
+    }
+
+    .headerOfNeed .leftNeed h2 {
+        font-size: 20px;
+    }
+
+    .project .qualityBox {
+        padding: 50px 50px 20px 50px;
+    }
+
+    .typed-cursor {
+        font-size: 35px;
+    }
+
+    .headerOfNeed {
+        gap: 20px;
+    }
+
+    .leftNavbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contentOfQuality button {
+        padding: 19px 20px;
+    }
+
+    .contentTopArea h1 {
+        font-size: 45px;
+    }
+
+    .qualityBox {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rightBox img {
+        width: 100%;
+    }
+
+    .contentOfQuality h2 {
+        width: 70vw;
+    }
+
+    .statsContent h1 {
+        font-size: 40px;
+    }
+
+    .contactPage {
+        width: 100vw;
+    }
+
+    .project .rightBox img {
+        display: none;
+    }
+
+    .contactUs {
+        padding: 50px;
+    }
+
+    .buildingMemorableheader {
+        width: 95vw;
+    }
+
+    .buildingMemorablePara {
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bigFontQuality h1 {
+        font-size: 65px;
+    }
+
+    .smallFontQuality h1 {
+        font-size: 30px;
+    }
+
+    .statsCard {
+        padding: 5px;
+    }
+
+    .statsContent h1 {
+        font-size: 30px;
+    }
+
+    .statsImage2 img {
+        height: 100px;
+    }
+
+    .bigFontQuality h1 {
+        font-size: 55px;
+    }
+
+    .checkbox {
+        display: none;
+    }
+
+    .contactPage {
+        padding: 20px;
+    }
 }
