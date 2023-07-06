@@ -670,7 +670,7 @@ form button {
     }
 
     .card {
-        height: 35vh;
+        height: 45vh;
     }
 }
 
@@ -803,6 +803,15 @@ form button {
     .buildingMemorablePara {
         width: 95vw;
     }
+
+    .statsImage .statsImage1 {
+        object-fit: contain;
+    }
+
+    .statsImage2 img {
+        width: 100%;
+        object-fit: contain;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -819,7 +828,20 @@ form button {
     }
 
     .statsContent h1 {
-        font-size: 30px;
+        font-size: 25px;
+    }
+
+    .statsContent p {
+        display: none;
+    }
+
+    .statsCard {
+        padding: 15px;
+        gap: 0px;
+    }
+
+    .statsImage {
+        gap: 0px;
     }
 
     .statsImage2 img {

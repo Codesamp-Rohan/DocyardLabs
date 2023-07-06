@@ -295,39 +295,40 @@
                     </div>
                 </div>
                 <div class="contactPage">
-                    <form action="get">
+                    <form class="form-horizontal" method="post" action="contact.php">
                         <label for="name">Name *</label>
                         <span class="name">
-                            <input type="text" placeholder="First">
-                            <input type="text" placeholder="Last">
+                            <input type="text" name="firstname" placeholder="First" required>
+                            <input type="text" name="secondname" placeholder="Last" required>
                         </span>
                         <label for="website">What type of Websites are you looking for? *</label>
                         <span class="checkbox">
-                            <input class="checkbox1" type="checkbox">
-                            <input class="checkbox2" type="checkbox">
-                            <input class="checkbox3" type="checkbox">
+                            <input class="checkbox1" type="checkbox" required>
+                            <input class="checkbox2" type="checkbox" required>
+                            <input class="checkbox3" type="checkbox" required>
                         </span>
                         <label for="number">Phone Number *</label>
                         <span class="name">
-                            <input type="number">
+                            <input type="tel" name="number" required>
                         </span>
                         <label for="Email">Email *</label>
                         <span class="name">
-                            <input type="email">
+                            <input type="email" name="email" required>
                         </span>
                         <label for="textarea">Please explain a bit about the Project</label>
                         <textarea name="message" class="textarea" cols="30" rows="10" placeholder="Message"></textarea>
 
-                        <a href="#"><button>Let's Build a Website</button></a>
+                        <a href="sendmail.php"><button type="submit">Let's Build a Website</button></a>
                     </form>
                 </div>
             </div>
-
-
-
-
-
         </div>
+
+
+
+
+
+    </div>
     </div>
 
 
