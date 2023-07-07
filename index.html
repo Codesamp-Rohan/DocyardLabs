@@ -24,8 +24,19 @@
                 <a href="#project">Projects</a>
                 <a href="#contactUs">Pricing</a>
                 <a href="#contactUs">Contact Us</a>
+                <a href="ourProjects.html">Our Projects</a>
             </div>
             <div class="rightNavbar">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">MENU</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="index.html">Services</a>
+                        <a href="index.html">Projects</a>
+                        <a href="#contactUs">Pricing</a>
+                        <a href="#contactUs">Contact Us</a>
+                        <a href="ourProjects.html">Our Projects</a>
+                    </div>
+                </div>
                 <a href="#"><button class="rightNavbarButton">Instagram</button></a>
             </div>
         </div>
@@ -252,7 +263,7 @@
                         <div class="contentOfQuality">
                             <h2>A dynamic and visually stunning Book-selling website built on the WordPress.</h2>
                             <p>The client asked us to build a “shopify” like site but on wordpress. We got it done. </p>
-                            <a href="#"><button>Lets' Build a It</button></a>
+                            <a href="#"><button>Lets' Build It</button></a>
                         </div>
                     </div>
                     <div class="rightBox">
@@ -263,7 +274,7 @@
                     <div class="leftBox">
                         <div class="contentOfQuality">
                             <h2>Tech-media website built for Techoob.</h2>
-                            <a href="#"><button>Lets' Build a It</button></a>
+                            <a href="#"><button>Lets' Build It</button></a>
                         </div>
                     </div>
                     <div class="rightBox">
@@ -276,7 +287,7 @@
                             <h2>A curated collection of exquisite Jhumkis</h2>
                             <p>Built on Shopify, this website combines stunning design with seamless functionality,
                                 providing a user-friendly interface for effortless browsing and purchasing. </p>
-                            <a href="#"><button>Lets' Build a It</button></a>
+                            <a href="#"><button>Lets' Build It</button></a>
                         </div>
                     </div>
                     <div class="rightBox">
@@ -349,6 +360,27 @@
             backSpeed: 150,
             loop: true
         });
+    </script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
     </script>
     <script src="script.js"></script>
 </body>
