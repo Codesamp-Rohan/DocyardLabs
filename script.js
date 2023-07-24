@@ -73,6 +73,7 @@ function rightSlide() {
 function mode() {
   document.getElementById("contentTopArea").style.color = "black";
   document.body.classList.toggle("darkMode");
+  document.getElementById("leftNavbar").style.color = "#000000";
   document.querySelector(".buildingMemorable").classList.toggle("textColor");
   document.getElementById("statsCard2").style.backgroundImage =
     "linear-gradient(180deg, #202020 0%, #52ff48 100%)";
