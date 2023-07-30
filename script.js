@@ -79,3 +79,20 @@ function mode() {
   document.getElementById("statsCard3").style.backgroundImage =
     "linear-gradient(180deg, #202020 0%, #7346ff 100%)";
 }
+
+const instaBtn = document.querySelector(".rightNavbarButton");
+const modelWindowEl = document.querySelector(".modelWindow");
+const closeBtn = document.querySelector(".cut");
+const topArea = document.querySelector(".topArea");
+
+instaBtn.addEventListener("click", function () {
+  modelWindowEl.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", function (e) {
+  modelWindowEl.classList.add("hidden");
+});
+
+topArea.addEventListener("click", function () {
+  modelWindowEl.classList.add("hidden");
+});
